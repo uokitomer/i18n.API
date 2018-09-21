@@ -1,19 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace i18n.API.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly IHostingEnvironment environment;
+
+        public ValuesController(IHostingEnvironment environment)
+        {
+            this.environment = environment;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public dynamic Get()
         {
-            return new string[] { "value1", "value2" };
+            var path = Path.Combine(environment.WebRootPath, "json.json");
+            string text = System.IO.File.ReadAllText(path);
+
+            return text;
         }
 
         // GET api/values/5

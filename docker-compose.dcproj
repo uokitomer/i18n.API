@@ -4,7 +4,7 @@
     <ProjectVersion>2.0</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>940e49de-f5be-4825-8c94-9ac0189b9582</ProjectGuid>
-    <DockerLaunchBrowser>True</DockerLaunchBrowser>
+    <DockerLaunchBrowser>false</DockerLaunchBrowser>
     <DockerServiceUrl>http://localhost:{ServicePort}/api/values</DockerServiceUrl>
     <DockerServiceName>i18n.api</DockerServiceName>
   </PropertyGroup>
