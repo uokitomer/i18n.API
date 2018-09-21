@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  i18n.api:
+    image: i18n.api
+    build:
+      context: .
+      dockerfile: i18n.API/Dockerfile
