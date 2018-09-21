@@ -12,13 +12,13 @@ services:
     image: amazon/dynamodb-local
     build:
       context: .
-    command: ["-jar", "DynamoDBLocal.jar", "-dbPath", "/data"]
+    command: ["-jar", "DynamoDBLocal.jar", "-dbPath", "/home/dynamodblocal/data"]
     ports:
       - "8000:8000"
     networks:
       - back-tier
     volumes:
-      - "dbdata:/data"
+      - "dbdata:/home/dynamodblocal/data"
 
 volumes:
   dbdata:
