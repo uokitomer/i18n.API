@@ -7,18 +7,18 @@ services:
       context: .
       dockerfile: i18n.API/Dockerfile
     depends_on:
-      - dynamodb
-  dynamodb:
-    image: amazon/dynamodb-local
+      - i18b.dynamodb
+  i18b.dynamodb:
+    image: i18n.dynamodb
     build:
       context: .
-    command: ["-jar", "DynamoDBLocal.jar", "-dbPath", "/home/dynamodblocal/data"]
+      dockerfile: i18n.DynamoDB/Dockerfile
     ports:
       - "8000:8000"
     networks:
       - back-tier
     volumes:
-      - "dbdata:/home/dynamodblocal/data"
+      - "dbdata:/data"
 
 volumes:
   dbdata:

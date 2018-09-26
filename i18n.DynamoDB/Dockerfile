@@ -1,4 +1,7 @@
-FROM amazon/dynamodb-local AS base
-WORKDIR /app
+FROM amazon/dynamodb-local
 
-VOLUME["dbdata:/home/dynamodblocal/data"]
+USER root
+
+RUN mkdir -p -m 0777 /data
+
+CMD ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-dbPath", "/home/dynamodblocal/"]
