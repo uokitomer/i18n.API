@@ -8,5 +8,12 @@ services:
       - "80"
     networks:
       - back-tier
+  i18b.dynamodb:
+    env_file:
+      - env_file.env
+    ports:
+      - "8000:8000"
+    networks:
+      - back-tier
 networks:
   back-tier:

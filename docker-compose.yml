@@ -13,12 +13,7 @@ services:
     build:
       context: .
       dockerfile: i18n.DynamoDB/Dockerfile
-    ports:
-      - "8000:8000"
-    networks:
-      - back-tier
     volumes:
       - "dbdata:/data"
-
 volumes:
   dbdata:
