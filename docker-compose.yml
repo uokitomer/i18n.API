@@ -10,6 +10,8 @@ services:
       - i18b.dynamodb
   i18b.dynamodb:
     image: i18n.dynamodb
+    env_file:
+      - env_file.env
     build:
       context: .
       dockerfile: i18n.DynamoDB/Dockerfile

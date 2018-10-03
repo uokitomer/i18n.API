@@ -9,7 +9,7 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{F07D7596-B6D4-4E6F-A3A1-50168615F8BE}"
 	ProjectSection(SolutionItems) = preProject
-		env_fil.env = env_fil.env
+		env_file.env = env_file.env
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "i18n.DynamoDB", "i18n.DynamoDB\i18n.DynamoDB.csproj", "{DEB8DC90-5D37-416A-ABAA-159744583C51}"
